@@ -12,9 +12,7 @@ import static org.jooq.impl.DSL.*;
 public class JooqHierarchy {
     record Content(Long id, String nodeId, List<Content> children) {};
     public static void main(String[] args) {
-        /*String url = "jdbc:postgresql://localhost:5431/mydatabase";
-        String user = "myuser";
-        String password = "secret";*/
+
         String url = ConfigLoader.get("db.url");
         String user = ConfigLoader.get("db.user");
         String password = ConfigLoader.get("db.password");
